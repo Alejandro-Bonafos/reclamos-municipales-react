@@ -1,0 +1,172 @@
+.header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+
+.header.scrolled {
+  background: #0f428657; 
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 12px 24px;
+}
+
+.navLinks ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.header.scrolled .navLinks ul li a {
+  color: #fff;
+
+}
+
+/* Botón hamburguesa */
+.menuButton {
+  display: none;
+  flex-direction: column;
+  justify-content:start;
+  width: 40px;
+  height: auto;
+  border: none;
+  cursor: pointer;
+
+}
+
+.menuButton span {
+  display: block;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled .menuButton span {
+  background: #3f3e3e;
+  margin-top: 1px;
+}
+
+/* Animación X */
+.menuButton.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.menuButton.open span:nth-child(2) {
+  opacity: 0;
+}
+.menuButton.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Menú lateral en mobile */
+.sideMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 260px;
+  height: 100vh;
+  background: #c1d2e4d6;
+  padding: 50px 20px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  transition: right 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  z-index: 1500;
+}
+
+.sideMenu.open {
+  right: 0;
+}
+
+.sideMenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sideMenu ul li {
+  margin: 20px 0;
+}
+
+.sideMenu ul li a {
+  text-decoration: none;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.sideMenu ul li a:hover {
+  color: #d1ddea;
+}
+
+.saludoContainer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.saludo {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.logout {
+  padding: 8px 14px;
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background: #a36d6d;
+}
+
+/* Responsive: menú hamburguesa */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+  .menuButton {
+    display: flex;
+  }
+}
+
+.closeButton {
+  display: flex;
+  justify-content: start;
+  margin-top: 60px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000000; /* negro para que se vea bien */
+  transition: transform 0.2s, color 0.2s;
+}
+
+.closeButton:hover {
+  transform: rotate(90deg) scale(1.2);
+  color: #007bff; /* un azul moderno que combina con tu banner */
+}

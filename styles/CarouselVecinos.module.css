@@ -1,0 +1,31 @@
+
+.carousel {
+  width: 100vw;
+  max-height: 600px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+.carousel img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.container, .container-fluid, .row {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}

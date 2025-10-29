@@ -1,0 +1,27 @@
+
+.reclamosTabla {
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.reclamosTabla th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.reclamosTabla td, .reclamosTabla th {
+  vertical-align: middle;
+  padding: 12px;
+}
+
+.reclamoImagen {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,37 @@
+/* 🧱 Contenedor general */
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+/* 🏷️ Sección de título y descripción */
+.titulopresentacion {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.titulopresentacion h5 {
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 0.75rem;
+}
+
+.titulopresentacion p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: black;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* 📋 Sección de reclamos */
+.presentacion {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 2rem;
+  
+}
+
+

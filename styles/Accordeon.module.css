@@ -1,0 +1,41 @@
+.primerItem {
+  border-radius: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  font-weight: 400;
+}
+
+
+.primerItem :global(.accordion-button) {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  
+}
+
+:global(.accordion-button:not(.collapsed)) {
+  color: inherit !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  background-color:#c5c5db !important;
+  font-weight: 400;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  
+}
+
+:global(.accordion-button) {
+  color: rgb(255, 255, 255) !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: #8484f4bb;
+  font-weight: 400;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  
+}
+

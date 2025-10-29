@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;500&display=swap');
+
+/* ------------------------------------------------------------------- */
+
+/* Contenedor principal: Centra el formulario en la pantalla */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa el 100% de la altura de la vista */
+    width: 100%;
+    height: auto;
+    /* Opcional: Si quieres un fondo en el container */
+    /* background-color: #f0f2f5; */ 
+    padding: 10px; /* Padding para que no toque los bordes en móvil */
+    box-sizing: border-box;
+}
+
+/* Tarjeta (Formulario de Login) */
+.card {
+    background: linear-gradient(135deg, #68a8e7, #8babce); 
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.454);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    /* Define un ancho máximo para que no sea demasiado grande en escritorios */
+    max-width: 400px; 
+    width: 100%; /* Asegura que ocupe el 100% del espacio disponible (hasta 400px) */
+    box-sizing: border-box;
+    margin-top: -100px;
+}
+
+/* Título */
+.title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 1.8rem; /* Tamaño de fuente por defecto */
+}
+
+/* Grupos de Formulario (Label + Input) */
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+/* Etiqueta */
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+/* Input (Campo de texto/contraseña) */
+.input {
+    width: 100%; /* Asegura que el input ocupe todo el ancho */
+    padding: 0.75rem 1rem; /* Padding vertical y horizontal */
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Crucial para que el padding no desborde el ancho */
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(48, 130, 223, 0.5); /* Sombra al enfocar */
+}
+
+/* Botón de Submit */
+.button {
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 0.75rem 1rem;
+    background-color: #3082df;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.button:hover {
+    background-color: #0b53a0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mensaje de Error */
+.errorMessage {
+    margin-top: 1rem;
+    padding: 10px 15px;
+    color: #ff3333; /* Color de texto más visible para error */
+    background-color: #ffdddd; /* Fondo claro para el error */
+    border: 1px solid #ff3333;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Iconos de Input */
+.inputIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon .icon {
+    position: absolute;
+    left: 10px;
+    color: #3b638bd3;
+    font-size: 1.1rem;
+    z-index: 10; /* Asegura que el icono esté por encima del input */
+}
+
+.inputIcon input {
+    padding-left: 35px; /* Deja espacio para el icono */
+}
+
+/* Enlace de "Olvidaste Contraseña" */
+.forgotPassword {
+    text-align: center;
+    margin-top: -10px; /* Un poco de ajuste visual */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+}
+
+.forgotPassword a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.forgotPassword a:hover {
+    color: #d1e4ff;
+    border-bottom: 1px solid #d1e4ff;
+}
+
+/* ------------------------------------------------------------------- */
+
+/* ## Media Queries para Diseño Responsive */
+
+/* Teléfonos (Ancho máximo de 600px) */
+@media (max-width: 600px) {
+    .card {
+        padding: 1.5rem; /* Reduce el padding en pantallas pequeñas */
+        border-radius: 0; /* Opcional: Borde menos redondeado para ocupar más espacio */
+        max-width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        box-shadow: none; /* Opcional: Quitar sombra en móvil para un diseño más limpio */
+        min-height: 70vh; /* Opcional: Asegura que el fondo sea continuo si el .container no tiene fondo */
+    }
+    
+    .container {
+        padding: 0;
+    }
+
+    .title {
+        font-size: 1.6rem; /* Reduce el tamaño del título */
+        margin-bottom: 1rem;
+    }
+
+    .input {
+        padding: 0.6rem 1rem; /* Ajuste del padding de los inputs */
+        font-size: 0.95rem;
+    }
+    
+    .button {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .inputIcon .icon {
+        font-size: 1rem;
+    }
+
+    .inputIcon input {
+        padding-left: 30px; /* Ajusta el padding para el icono más pequeño */
+    }
+    
+    .forgotPassword, .label {
+        font-size: 0.85rem;
+    }
+}
+
+/* Tabletas y Escritorios medianos (Ancho entre 601px y 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .card {
+        padding: 2.5rem;
+        max-width: 500px; /* Un poco más ancho en tabletas */
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .button {
+        padding: 0.8rem 1rem;
+        font-size: 1.2rem;
+    }
+}

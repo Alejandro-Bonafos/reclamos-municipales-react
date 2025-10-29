@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;500&display=swap');
+
+.listaContenedor {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.listaHorizontal {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.itemHover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: none;
+  border: none;     
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  color: rgb(255, 255, 255);
+}
+
+.circulo {
+  width: 120px;
+  height: 120px;
+  border-radius: 30%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.circulo:hover {
+  transform: scale(1.3);
+  
+}
+
+.itemHover:hover{
+  
+  color: rgba(20, 40, 90, 0.2);
+
+}
+
+
+.microbasurales .circulo {
+  background-image: url('https://radio.unr.edu.ar/wp-content/uploads/2024/08/image-2.png');
+}
+
+.recoleccion .circulo {
+  background-image: url('https://radio.unr.edu.ar/wp-content/uploads/2025/04/p1hbgkcgr5pgu1iqojbs1d1t10487.jpg');
+}
+
+.ramas .circulo {
+  background-image: url('https://www.formosatuciudad.gob.ar/archivos/CORONAVIRUS/IMG-20220314-WA0135_222.jpg');
+}
+
+.otros .circulo {
+  background-image: url('https://www.bcra.gob.ar/Imagenes/BCRAyVos/PUSF_RECLAMO_GENERICO.jpg');
+}
+
+@media (max-width: 800px) {
+  .circulo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .listaHorizontal {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .listaHorizontal {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .circulo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .itemHover {
+    
+    font-size: 1.2rem;
+  }
+}

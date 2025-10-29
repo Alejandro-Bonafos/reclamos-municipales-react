@@ -1,0 +1,65 @@
+
+.container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tittle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #117ae2;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.error {
+  margin-top: 1rem;
+  color: #c62828;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.forgotPassword {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.forgotPassword a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
