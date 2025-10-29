@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-   base: '/reclamos-front/',
+   base: '/reclamos-municipales-react/',
   server: {
     proxy: {
       '/api': 'http://localhost:3000'
