@@ -28,12 +28,11 @@ const Home = () => {
             >
                <div className={styles.contenedorBienvenida}>
 
-  {/* 1. TÍTULO NUEVO */}
+  
   <h1 className={styles.tituloPrincipal}>
     Juntos mejoramos nuestra ciudad.
   </h1>
 
-  {/* 2. TU TEXTO ANTERIOR (AHORA ES EL SUBTÍTULO) */}
   <p className={styles.subtituloBienvenida}>
     Desde la Dirección de Voz Ciudadana, trabajamos para canalizar tus necesidades 
     y acercarlas a las áreas correspondientes para su resolución. ¡Estamos para ayudarte!

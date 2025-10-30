@@ -1,7 +1,7 @@
 {
   "name": "reclamos-front",
   "private": true,
-  "homepage": "https://github.com/Alejandro-Bonafos/reclamos-front",
+  "homepage": "https://github.com/Alejandro-Bonafos/reclamos-municipales-react",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
