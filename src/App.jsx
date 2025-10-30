@@ -12,7 +12,7 @@ import Layouts from './componentes/layouts/Layouts';
 function App() { 
 
   return (
-    <Router basename="/reclamos-front">    
+    <Router basename="/reclamos-municipales-react">    
       <Routes> 
 
         <Route path="/" element={<Layouts />}>
