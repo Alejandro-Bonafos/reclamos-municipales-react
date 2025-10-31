@@ -7,7 +7,7 @@ const ReclamosVecino = () => {
   const [reclamos, setReclamos] = useState([]);
   const [error, setError] = useState("");
 
-  const vecino_id = parseInt(localStorage.getItem("vecino_id"), 10); // guardado en login
+  const vecino_id = parseInt(localStorage.getItem("vecino_id"), 10); 
   console.log("ID leído desde localStorage:", vecino_id);
 
   useEffect(() => {

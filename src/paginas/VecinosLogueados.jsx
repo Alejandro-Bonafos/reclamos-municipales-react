@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from '../../styles/VecinosLogueados.module.css';
-import CarouselVecinos from '../componentes/CarouselVecinos';
 import Encuesta from '../componentes/Encuesta';
 
 function VecinosLogueados() {
@@ -24,14 +23,10 @@ function VecinosLogueados() {
     </p>
   </div>
 
-  <div className={styles.carousel}>
-    <CarouselVecinos />
-  </div>
-
   <section className={styles.encuesta}>
-    <h6 className={styles.encuestaPregunta}>
+    <h3 className={styles.encuestaPregunta}>
       ¿Nos ayudarías a mejorar con tu opinión?
-    </h6>
+    </h3  >
     <p className={styles.encuestaTexto}>
       Te invitamos a participar en una breve encuesta
     </p>

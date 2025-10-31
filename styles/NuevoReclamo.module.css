@@ -1,41 +1,61 @@
-/* Contenedor general */
 .wrapper {
   display: flex;
-  flex-direction: column; /* Apila verticalmente */
+  flex-direction: column; 
   align-items: center;
   padding: 40px 20px;
-  background-color: #f5f5f5;
+  background-color: #f4f7fa; 
   min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Sección de presentación */
 .presentacion {
-  width: 70%;
+  width: 100%; 
   max-width: 1200px;
   background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px; 
+  padding: 30px 40px;
+  border-top: 4px solid #004a99;
 }
 
-/* Título y párrafo */
 .titulopresentacion {
+  width: 100%;
   max-width: 900px;
   text-align: center;
   margin-bottom: 30px;
 }
 
-.titulopresentacion h5 {
-  font-size: 1.2rem;
-  color: black;
-  margin-bottom: 0.75rem;
+.titulopresentacion h3 {
+  font-size: 2rem; 
+  font-weight: 700;
+  color: #003366; 
+  margin-bottom: 15px;
 }
 
 .titulopresentacion p {
-  font-size: 0.8rem;
-  line-height: 1.6;
-  color: black;
+  font-size: 1rem;
+  line-height: 1.6; 
+  color: #555555; 
   margin: 0 auto;
   max-width: 800px;
+  font-weight: 400; 
 }
 
+/* ===== ZONA RESPONSIVE (Para Celular) ==== */
+/* ========================================= */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 20px 15px;
+  }
+  .presentacion {
+    width: 100%;
+    padding: 25px 20px;
+  }
 
+  .titulopresentacion h3 {
+    font-size: 1.5rem;
+  }
+  .titulopresentacion p {
+    font-size: 0.9rem;
+  }
+}

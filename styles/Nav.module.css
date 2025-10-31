@@ -1,22 +1,26 @@
 .header {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
-
 .header.scrolled {
-  background: #0f428657; 
+  background: #0f428657;
   color: #fff;
 }
 
 .container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 12px 24px;
+}
+
+.navLinks {
+  display: block;
 }
 
 .navLinks ul {
@@ -29,26 +33,120 @@
 
 .navLinks ul li a {
   text-decoration: none;
-  color: #000;
+  color: #5f5a5a;
   font-weight: 500;
+  font-size: 1.1rem;
   transition: color 0.2s;
+}
+
+.navLinks ul li a:hover{
+  background-color: rgba(241, 238, 234, 0.436);
+  border-radius: 8px;
 }
 
 .header.scrolled .navLinks ul li a {
   color: #fff;
-
 }
 
-/* Botón hamburguesa */
+.desktopAuth {
+  position: relative; 
+  display: flex;
+  align-items: center;
+}
+
+.profileButton {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: -6px;
+  transition: background-color 0.2s;
+}
+
+.profileButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.header.scrolled .profileButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.saludo {
+  font-weight: 500;
+  color: #000;
+  font-size: 0.95rem;
+  margin-right: 8px;
+}
+
+.header.scrolled .saludo {
+  color: #fff;
+}
+
+.arrow {
+  font-size: 0.7rem;
+  color: #191818;
+  transition: transform 0.2s;
+}
+
+.header.scrolled .arrow {
+  color: #fff;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 2px);
+  right: 0;
+  background: #ffffff50;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1001;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  padding: 5px 0;
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: -5px;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f1a1b;
+  transition: background-color 0.2s;
+}
+
+.logout:hover {
+  background: #74a6d8;
+}
+
+/* NAVEGACIÓN MÓVIL*/
+
+/* Botón Hamburguesa */
 .menuButton {
   display: none;
   flex-direction: column;
-  justify-content:start;
+  justify-content: start;
   width: 40px;
   height: auto;
   border: none;
   cursor: pointer;
-
+  background: transparent;
+  padding: 0;
+  gap: 5px; 
 }
 
 .menuButton span {
@@ -60,11 +158,9 @@
 }
 
 .header.scrolled .menuButton span {
-  background: #3f3e3e;
-  margin-top: 1px;
+  background: #fff;
 }
 
-/* Animación X */
 .menuButton.open span:nth-child(1) {
   transform: rotate(45deg) translateY(8px);
 }
@@ -75,7 +171,7 @@
   transform: rotate(-45deg) translateY(-8px);
 }
 
-/* Menú lateral en mobile */
+/* Panel Lateral */
 .sideMenu {
   position: fixed;
   top: 0;
@@ -99,6 +195,7 @@
 .sideMenu ul {
   list-style: none;
   padding: 0;
+  margin: 0; 
 }
 
 .sideMenu ul li {
@@ -107,7 +204,7 @@
 
 .sideMenu ul li a {
   text-decoration: none;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: #333;
   font-size: 1.1rem;
   font-weight: bold;
@@ -115,7 +212,7 @@
 }
 
 .sideMenu ul li a:hover {
-  color: #d1ddea;
+  color: #004a99;
 }
 
 .saludoContainer {
@@ -123,50 +220,64 @@
   text-align: center;
 }
 
-.saludo {
+.saludoContainer .saludo {
   display: block;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
   font-weight: 500;
+  color: #333;
 }
 
-.logout {
-  padding: 8px 14px;
-  background: #ff4d4f;
-  color: white;
+.closeButton {
+  position: absolute;
+  top: 5px;
+  left: -80px;
+  background: none;
   border: none;
-  border-radius: 6px;
+  font-size: 2rem;
+  font-weight: bold;
   cursor: pointer;
+  color: #000000;
+  transition: transform 0.2s, color 0.2s;
+  margin-top: 0; 
 }
 
-.logout:hover {
-  background: #a36d6d;
+.closeButton:hover {
+  color: #00000000;
+  background-color: rgba(245, 222, 179, 0);
 }
 
-/* Responsive: menú hamburguesa */
+.sideMenu .logout {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 6px;
+  color: white;
+  background-color: #437da1; 
+  margin-top: 0;
+}
+
+.sideMenu .logout:hover {
+  background-color: #c82333;
+}
+
+/*  MEDIA QUERY (Responsive)*/
+
 @media (max-width: 768px) {
   .navLinks {
     display: none;
   }
+
   .menuButton {
     display: flex;
   }
-}
 
-.closeButton {
-  display: flex;
-  justify-content: start;
-  margin-top: 60px;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  color: #000000; /* negro para que se vea bien */
-  transition: transform 0.2s, color 0.2s;
-}
-
-.closeButton:hover {
-  transform: rotate(90deg) scale(1.2);
-  color: #007bff; /* un azul moderno que combina con tu banner */
+  .desktopAuth {
+    display: none;
+  }
+  
+  .container {
+    justify-content: flex-end;
+  }
 }

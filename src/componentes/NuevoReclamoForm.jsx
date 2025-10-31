@@ -16,7 +16,7 @@ function FormularioReclamo() {
 
   const [imagen, setImagen] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [estado, setEstado] = useState(null); // 'enviado', 'error'
+  const [estado, setEstado] = useState(null); 
 
   const handleChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -40,7 +40,7 @@ function FormularioReclamo() {
     datos.append('tipo', formData.tipo);
     datos.append('descripcion', formData.descripcion);
     datos.append('direccion', formData.direccion);
-    datos.append('vecino_id', vecino_id); // 👈 lo agregás al FormData
+    datos.append('vecino_id', vecino_id); 
     if (imagen) datos.append('imagen', imagen);
 
     try {

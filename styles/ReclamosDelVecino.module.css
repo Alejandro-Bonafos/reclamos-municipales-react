@@ -1,37 +1,63 @@
-/* 🧱 Contenedor general */
 .wrapper {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  padding: 40px 20px; 
+  background-color: #f4f7fa;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* 🏷️ Sección de título y descripción */
 .titulopresentacion {
+  width: 100%;
+  max-width: 900px;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
 .titulopresentacion h5 {
-  font-size: 1.2rem;
-  color: black;
-  margin-bottom: 0.75rem;
+  font-size: 2rem; 
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 15px;
 }
 
 .titulopresentacion p {
-  font-size: 0.8rem;
+  font-size: 1rem; 
   line-height: 1.6;
-  color: black;
+  color: #555555; 
   margin: 0 auto;
   max-width: 800px;
+  font-weight: 400;
 }
 
-/* 📋 Sección de reclamos */
 .presentacion {
-  width: 100%;
+  width: 90%; 
+  max-width: 1200px; 
   background-color: #ffffff;
-  padding: 2rem;
-  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+  border-radius: 8px; 
+  padding: 30px 40px; 
+  border-top: 4px solid #004a99; 
 }
 
+/* ===== ZONA RESPONSIVE (Para Celular) ==== */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 20px 15px;
+  }
+  .presentacion {
+    width: 100%;
+    padding: 25px 20px;
+  }
+  .titulopresentacion h5 {
+    font-size: 1.5rem; 
+  }
+
+  .titulopresentacion p {
+    font-size: 0.9rem; 
+  }
+}
 

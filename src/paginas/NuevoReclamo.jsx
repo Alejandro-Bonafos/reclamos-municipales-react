@@ -8,9 +8,9 @@ function NuevoReclamo() {
     return (
          <div className={styles.wrapper}>
             <section className={styles.titulopresentacion}>
-                <h5>Aca podra cargar su reclamo</h5>
+                <h3>Aca podes cargar tu reclamo</h3>
                 <p>Este sistema permite cargar reclamos sobre residuos en el municipio.
-                    Por cualquier duda, comunicarse con la Mesa de Entradas Municipal al Teléfono: 0345 123-4567 Int. 132.</p>
+                    Por cualquier duda, comunicarse con la Mesa de Entradas Municipal al Teléfono: +54 (0362) 444-5555 Int. 132.</p>
             </section>
 
             <section id="nuevo-reclamo" className={styles.presentacion}>
